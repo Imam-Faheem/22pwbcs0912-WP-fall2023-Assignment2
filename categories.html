@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Categories</title>
+    <link rel="stylesheet" href="./assets/other_resources/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</head>
+<body>
+   <!-- Navbar -->
+   <nav id="home" class="navbar navbar-expand-lg navbar-dark bg-dark-subtle d-flex justify-content-center align-item-center" >
+    <p class="m-0  px-4">
+        DELIVERY INCLUDED TO THE PK  ·  FREE RESERVE & COLLECT IN OUR BOOKSHOPS 
+    </p>
+  </nav>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-4 border border-1">
+        <div  class="container-fluid d-flex justify-content-between">
+            <div id="logoo">
+            <a class="navbar-brand" style="font-family: 'Times New Roman', Times, serif; width: 100px;" href="#"><img src="./assets/images/booklogo.png" alt=""></a>
+        </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse hii" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+              <li class="nav-item p-2">
+                <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+              </li>
+              
+              <li class="nav-item p-2 dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Book Categories
+                </a>
+                <ul  class="dropdown-menu">
+                  <!-- Categories will be dynamically added here using JavaScript -->
+                </ul>
+              </li>
+              
+              <li class="nav-item p-2">
+                <a class="nav-link" href="./bestSeller.html">Best Sellers</a>
+              </li>
+              <li class="nav-item p-2">
+                <a class="nav-link" href="./payment.html">Payment</a>
+              </li>
+              <li class="nav-item p-2">
+                <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
+            </ul>
+            
+        </div>
+        <div style="width: fit-content ; margin-left: auto; flex-basis: 0px;" class="rdd"            id="navbarSupportedContent">
+
+          <a style="display: flex;text-wrap: nowrap; justify-content: end; text-decoration: none; color: rgb(44, 44, 44); margin-left: auto;" href="./cart.html">
+            <i class="fa-solid fa-cart-shopping" style="font-size: 26px; margin-right: 10px;"></i>
+            Your Cart 
+          <span style="margin-left: 7px; color: #107896;" class="fw-bold" id="cartCount">&nbsp;0</span>
+          </a>
+
+        </div>
+
+        </div>
+      </nav>
+
+    <!-- Category Filters -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Book Categories</h1>
+        <div class="mb-3">
+            <label for="categoryFilter" class="form-label fw-medium">Filter by Category:</label>
+            <select class="form-select " id="categoryFilter" onchange="filterBooks()">
+                <option  value="all">All Categories</option>
+                <!-- Categories will be dynamically added here using JavaScript -->
+            </select>
+        </div>
+    </div>
+
+    <!-- Book Display Section -->
+    <div class="container mt-5">
+        <div id="bookList" class="row">
+            <!-- Book cards will be dynamically added here using JavaScript -->
+        </div>
+    </div>
+
+    
+<!-- Add this modal element to your HTML -->
+<div class="modal fade" id="addToCartModal" tabindex="-1" aria-labelledby="addToCartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addToCartModalLabel">Book Added to Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center ">
+   
+                <div style="width: 18rem;" class="card  box-shadow">
+                    <img   class="card-img-top" src="./assets/images/placeholder.png" alt="Book Cover">
+                    <div class="card-body">
+                        <p id="modalBookCategory" class="card-text text-muted italic"><em></em></p>
+                
+                        <div class="d-flex justify-content-between">
+                            <h5 id="modalBookTitle" class="card-title">${book.title}</h5>
+                            <p id="modalBookPrice" style="color:#107896; font-weight:bold; font-size:20px;" class="card-text">$</p>
+                        </div>
+                        
+                        <p id="modalBookDescription" class="card-text">${book.description}</p>
+                        <p id="modalBookAuthor" class="card-text mt-3 blockquote-footer pb-4">by: </p>
+                
+                       
+                    </div>
+                </div>
+                
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- Footer Section -->
+    <footer class="footer bg-body-secondary p-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mt-3">
+                    <h5>About Us</h5>
+                    <p>Your Book Store is dedicated to providing a wide range of quality books to readers around the world. Explore our collection and immerse yourself in captivating stories.</p>
+                </div>
+
+                <div class="col-md-3 mt-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-decoration-none text-muted" href="index.html">Home</a></li>
+                        <li><a class="text-decoration-none text-muted" href="#">Categories</a></li>
+                        <li><a class="text-decoration-none text-muted" href="contact.html">Contact Us</a></li>
+                        <li><a class="text-decoration-none text-muted" href="#">Cart</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 mt-3">
+                    <h5>Contact Us</h5>
+                    <p><strong>Email:</strong> imamfaheem768@gmail.com</p>
+                    <p><strong>Phone:</strong> +92 3455308093</p>
+                    <p><strong>Address:</strong> Chokara, Tehsil Tahkt-e-Nasrati, Karak, KPK </p>
+                </div>
+
+                <div class="col-md-3 mt-3">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-decoration-none text-muted" href="https://web.facebook.com/happy.rose.9655806" target="_blank">Facebook</a></li>
+                        <li><a class="text-decoration-none text-muted" href="https://www.linkedin.com/in/imamfaheem/" target="_blank">Linkedin</a></li>
+                        <li><a class="text-decoration-none text-muted" href="https://github.com/Imam-Faheem" target="_blank">Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>20233 Book Store all rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- <script src="./assets/other_resources/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script> -->
+  <!-- <script src="./script.js"></script> -->
+  <script src="./cartIncrementAndModel.js"></script>
+  <script src="./categorty.js"></script>
+
+
+<script>
+
+    // Fetch data from Book.json using the Fetch API
+function fetchBooks() {
+    return fetch('./assets/other_resources/books.json')
+        .then(response => response.json())
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            return [];
+        });
+}
+
+// Populate category filter options
+function populateCategoryOptions(books) {
+    const categoryFilter = document.getElementById('categoryFilter');
+    const categories = new Set();
+
+    books.forEach(book => categories.add(book.category));
+
+    categories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category.toLowerCase();
+        option.textContent = category;
+        categoryFilter.appendChild(option);
+    });
+}
+
+// Display books based on selected category
+function displayBooks(books, selectedCategory) {
+    const bookList = document.getElementById('bookList');
+    bookList.innerHTML = ''; // Clear previous book list
+
+    books.forEach(book => {
+        if (selectedCategory === 'all' || book.category.toLowerCase() === selectedCategory) {
+            addBookCard(book);
+        }
+    });
+}
+
+// Function to add a book card to the bookList
+function addBookCard(book) {
+    const bookList = document.getElementById('bookList');
+
+    // Create a new book card element
+    const bookCard = document.createElement('div');
+    bookCard.classList.add('col-md-4'); // Adjust the column size as needed
+
+    // Construct the HTML for the book card
+    bookCard.innerHTML = `
+    <div class="card mb-4 box-shadow">
+        <img class="card-img-top p-3" src="${book.cover_image}" alt="Book Cover">
+
+        <div class="card-body">
+        <p class="card-text text-muted italic "><em>#${book.category}</em></p>
+
+            <div class="d-flex justify-content-between">
+                <h4 style="color:#107896; class="card-title">${book.title}</h4>
+                <p style="color:#107896; font-weight:bold; font-size:20px;" class="card-text">$${book.price.toFixed(2)}</p>
+            </div>
+            <p class="card-text">${book.description}</p>
+            <p class="card-text mt-3 blockquote-footer pb-4">by: ${book.author}</p>
+          <button style="background-color:#107896; position:absolute; right:1rem; bottom:20px;
+          " class="btn btn text-white"  onclick="addToCart(${book.id})">Add to Cart</button>
+        </div>
+      </div>
+    `;
+
+    // Append the book card to the bookList
+    bookList.appendChild(bookCard);
+}
+
+
+
+// Initialize category filter and book display
+function initCategoryFilter() {
+    const categoryFilter = document.getElementById('categoryFilter');
+
+    // Fetch books and initialize the category filter
+    fetchBooks().then(books => {
+        populateCategoryOptions(books);
+
+        // Check URL for category parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryParam = urlParams.get('category');
+
+        // Set the selected category in the filter dropdown
+        if (categoryParam && categoryFilter) {
+            categoryFilter.value = categoryParam.toLowerCase();
+        }
+
+        // Initial book list display based on the selected category
+        displayBooks(books, categoryFilter.value.toLowerCase());
+    });
+
+    // Bind the filterBooks function to the onchange event
+    categoryFilter.addEventListener('change', function () {
+        filterBooks();
+    });
+}
+
+// Function to filter books based on selected category
+function filterBooks() {
+    const categoryFilter = document.getElementById('categoryFilter');
+    const selectedCategory = categoryFilter.value.toLowerCase();
+
+    // Update the URL with the selected category
+    const url = new URL(window.location.href);
+    url.searchParams.set('category', selectedCategory);
+
+    // Use replaceState to update the URL without triggering a page reload
+    window.history.replaceState({}, '', url);
+
+    // Fetch books and display based on the selected category
+    fetchBooks().then(books => {
+        displayBooks(books, selectedCategory);
+    });
+}
+
+// Execute the initialization function when the DOM is ready
+document.addEventListener('DOMContentLoaded', initCategoryFilter);
+
+</script>
+</body>
+</html>

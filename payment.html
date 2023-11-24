@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<title>Payment and Billing</title>
+<link rel="stylesheet" href="./assets/other_resources/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="./styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+crossorigin="anonymous"></script>
+</head>
+<style>
+    .payment-method>img{
+        
+        width: 100px;
+            
+
+    }
+    .payment-method>h3{
+        
+margin-top: 20px;
+font-size: 24px;
+text-align: center;
+    }
+    .paymentCards{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 10px 20px 10px;
+        background-color: rgb(247, 251, 255);
+        margin: 20px ;
+    }
+</style>
+<body>
+
+       <!-- Navbar -->
+   <nav id="home" class="navbar navbar-expand-lg navbar-dark bg-dark-subtle d-flex justify-content-center align-item-center" >
+    <p class="m-0  px-4">
+        DELIVERY INCLUDED TO THE PK  ·  FREE RESERVE & COLLECT IN OUR BOOKSHOPS 
+    </p>
+  </nav>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary p-4 border border-1">
+        <div  class="container-fluid d-flex justify-content-between">
+            <div id="logoo">
+            <a class="navbar-brand" style="font-family: 'Times New Roman', Times, serif; width: 100px;" href="#"><img src="./assets/images/booklogo.png" alt=""></a>
+        </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse hii" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+              <li class="nav-item p-2">
+                <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+              </li>
+              
+              <li class="nav-item p-2 dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Book Categories
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- Categories will be dynamically added here using JavaScript -->
+                </ul>
+              </li>
+              
+              <li class="nav-item p-2">
+                <a class="nav-link" href="./bestSeller.html">Best Sellers</a>
+              </li>
+              <li class="nav-item p-2">
+                <a class="nav-link active" href="./payment.html">Payment</a>
+              </li>
+              <li class="nav-item p-2">
+                <a class="nav-link" href="./contact.html">Contact Us</a>
+              </li>
+            </ul>
+            
+        </div>
+        <div style="width: fit-content ; margin-left: auto; flex-basis: 0px;" class="rdd"            id="navbarSupportedContent">
+
+          <a style="display: flex;text-wrap: nowrap; justify-content: end; text-decoration: none; color: rgb(44, 44, 44); margin-left: auto;" href="./cart.html">
+            <i class="fa-solid fa-cart-shopping" style="font-size: 26px; margin-right: 10px;"></i>
+            Your Cart 
+          <span style="margin-left: 7px; color: #107896;" class="fw-bold" id="cartCount">&nbsp;0</span>
+          </a>
+
+        </div>
+
+        </div>
+      </nav>
+      <div class="container col-lg-7 ">
+        <h2 class="mt-5 text-center mb-3">Payment and Billing</h2>
+      
+  
+<div class="payment-methods">
+
+  <div class="row mt-4 p-4">
+  <h4 class=" mt-4">Available Payment Methods</h4>
+
+    <div class="col-md-3 paymentCards">
+      <div class="payment-method">
+        <img src="./assets/images/Visa_logo_PNG4.png" alt="Visa">
+        <h3>Visa</h3>
+        
+      </div>
+    </div>
+
+    <div class="col-md-3 paymentCards">
+      <div class="payment-method">
+        <img src="./assets/images/Mastercard_logo_PNG19.png" alt="Mastercard">
+        <h3>Mastercard</h3>
+        
+      </div>
+    </div>
+
+    <div class="col-md-3 paymentCards">
+      <div class="payment-method">
+        <img src="./assets/images/pngwing.com (2).png" alt="PayPal">
+        <h3>PayPal</h3>
+        
+      </div>
+    </div>
+
+    <div class="col-md-3 paymentCards">
+      <div class="payment-method">
+        <img src="./assets/images/Sbi_logo_PNG1.png" alt="SBI">
+        <h3 class="text-center">SBI</h3>
+        
+      </div>
+    </div>
+
+    <div class="col-md-3 paymentCards">
+      <div class="payment-method">
+        <img src="https://seeklogo.com/images/A/apple-pay-logo-F68C9AC252-seeklogo.com.png" alt="Apple Pay">
+        <h3>Apple Pay</h3>
+        
+      </div>
+    </div>
+  </div>
+</div>
+      
+        <div class="order-summary p-4">
+          <h4>Order Summary:</h4>
+          <table class="order-table table ">
+              <div class="border d-flex align-items-center p-2 py-3 mt-3 col-5 ">
+                <h3 id="displayTotalPrice" class="fw-bolder fs-4">$565.00 USD</h3>
+                <h6 class="text-muted fw-medium mt-1 ms-5 "> The total amount</h6>
+              </div>
+          </table>
+        </div>
+
+        <div class="payment-information p-4 py-2">
+            <form>
+              <label for="paymentMethod"><h4>Payment Method:</h4></label>
+              <select id="paymentMethod" name="paymentMethod" class="form-control input-field rounded-0 mt-3 fs-5 text-muted">
+                <option value="creditCard">Credit Card</option>
+                <option value="debitCard">Debit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="googlePay">SBI</option>
+                <option value="bankTransfer">Bank Transfer</option>
+              </select>
+            </form>
+          </div>
+      
+          <div class="billing-address p-4 ">
+            <h4 class="mb-4">Billing Address</h4>
+            <form class="d-flex flex-column">
+              <div class="mb-3">
+                <label for="billingName" class="form-label bg-body-secondary w-100 ps-3 py-3 fs-6">Billing Name:</label>
+                <input type="text" id="billingName" name="billingName" class="form-control input-field rounded-0 m-0 fs-5" placeholder="Your Name">
+              </div>
+          
+              <div class="mb-3">
+                <label for="billingEmail" class="form-label bg-body-secondary w-100 ps-3 py-3 fs-6">Billing Email:</label>
+                <input type="email" id="billingEmail" name="billingEmail" class="form-control input-field rounded-0 m-0 fs-5" placeholder="email@example.com">
+              </div>
+          
+              <div class="mb-3">
+                <label for="billingAddress" class="form-label bg-body-secondary w-100 ps-3 py-3 fs-6">Billing Address:</label>
+                <textarea id="billingAddress" name="billingAddress" class="form-control input-field rounded-0 m-0 fs-5" placeholder="Main Street, Anytown, CA"></textarea>
+              </div>
+          
+              <div class="mb-3">
+                <label for="billingPhone" class="form-label bg-body-secondary w-100 ps-3 py-3 fs-6">Billing Phone Number:</label>
+                <input type="tel" id="billingPhone" name="billingPhone" class="form-control input-field rounded-0 m-0 fs-5" placeholder="123-456-7890">
+              </div>
+            </form>
+          </div>
+          
+          <div class="payment-button  px-4 mt-0">
+            <button style="background-color: #107896; border-radius: 0%; border: 2px solid #005b74b2;" type="submit" class="btn btn-primary btn-lg btn-block">Complete Payment</button>
+          </div>
+          
+      </div>
+
+<footer class="footer bg-body-secondary p-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mt-3">
+                <h5>About Us</h5>
+                <p>Your Book Store is dedicated to providing a wide range of quality books to readers around the world. Explore our collection and immerse yourself in captivating stories.</p>
+            </div>
+
+            <div class="col-md-3 mt-3">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-decoration-none text-muted" href="index.html">Home</a></li>
+                    <li><a class="text-decoration-none text-muted" href="#">Categories</a></li>
+                    <li><a class="text-decoration-none text-muted" href="contact.html">Contact Us</a></li>
+                    <li><a class="text-decoration-none text-muted" href="#">Cart</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mt-3">
+                <h5>Contact Us</h5>
+                <p><strong>Email:</strong> imamfaheem768@gmail.com</p>
+                <p><strong>Phone:</strong> +92 3455308093</p>
+                <p><strong>Address:</strong> Chokara, Tehsil Tahkt-e-Nasrati, Karak, KPK </p>
+            </div>
+
+            <div class="col-md-3 mt-3">
+                <h5>Follow Us</h5>
+                <ul class="list-unstyled">
+                    <li><a class="text-decoration-none text-muted" href="https://web.facebook.com/happy.rose.9655806" target="_blank">Facebook</a></li>
+                    <li><a class="text-decoration-none text-muted" href="https://www.linkedin.com/in/imamfaheem/" target="_blank">Linkedin</a></li>
+                    <li><a class="text-decoration-none text-muted" href="https://github.com/Imam-Faheem" target="_blank">Github</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>20233 Book Store all rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="./categorty.js"></script>
+        <script src="./cartIncrementAndModel.js"></script>
+        <script src="./cart.js"></script>
+
+        <script>
+            // Retrieve the total price from local storage
+            const totalPrice = localStorage.getItem('totalPrice');
+          
+            // Display the total price wherever you want in your HTML
+            document.getElementById("displayTotalPrice").innerHTML = `$${totalPrice}`;
+          </script>
+</body>
+</html>
